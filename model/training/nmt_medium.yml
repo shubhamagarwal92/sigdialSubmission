@@ -8,7 +8,7 @@ model_params:
   encoder.class: seq2seq.encoders.BidirectionalRNNEncoder
   encoder.params:
     rnn_cell:
-      cell_class: LSTMCell
+      cell_class: GRUCell
       cell_params:
         num_units: 512
       dropout_input_keep_prob: 0.8
@@ -18,7 +18,7 @@ model_params:
   decoder.params:
     max_decode_length: 400
     rnn_cell:
-      cell_class: LSTMCell
+      cell_class: GRUCell
       cell_params:
         num_units: 512
       dropout_input_keep_prob: 0.8
